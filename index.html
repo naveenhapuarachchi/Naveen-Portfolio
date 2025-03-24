@@ -3,8 +3,20 @@
 
 <head>
 
+  <meta name="description" content="Naveen Hapuarachchi's Professional Portfolio">
+    <meta name="keywords" content="Naveen Hapuarachchi, Portfolio, Developer, Projects">
+    <meta name="author" content="Naveen Hapuarachchi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Naveen Hapuarachchi | Portfolio">
+    <meta property="og:description" content="Naveen Hapuarachchi's Professional Portfolio">
+    <meta property="og:image" content="src/webp/naveen5.jpg">
+    <meta property="og:url" content="https://naveen-portfolio-gamma.vercel.app/>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Naveen Hapuarachchi | Portfolio">
+    <meta property="og:locale" content="en_US">
+
   <title>Naveen Hapuarachchi | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+  <link rel="icon" type="image/x-icon" href="src/png/nh_logo.png" />
   <!-- aos cdn -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- stylesheet -->
@@ -16,7 +28,7 @@
 
 <body class="body">
   <audio loop="true" id="audioPlayer" style="display: none">
-    <source src="src/mp3/Pirates_of_the_Caribbean_Bass_Boosted_BGM-_Captain_Jack_Sparrow.mp3" type="audio/mp3" />
+    <source src="src/mp3/preloader.mp3" type="audio/mp3" />
   </audio>
   <div id="preloader"></div>
   <noscript>Allow Javascript</noscript>
@@ -24,6 +36,7 @@
   <header>
     <div class="cursor-inner" id="cursor-inner"></div>
     <div class="cursor-outer" id="cursor-outer"></div>
+    <div class="cursor-text" id="cursor-text"></div>
 
     <div class="navbar" id="navbar">
       <div class="hey">Hey!</div>
@@ -396,7 +409,9 @@
                     aria-label="Visit Tuition Management System GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
                   </a>
-                  
+                    <a href="https://tuition-management-system.vercel.app/" 
+                    target="_blank" class="cta" aria-label="Visit CIRS book">
+                      <span>Live view</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
                       <path d="M1,5 L11,5"></path>
                       <polyline points="8 1 12 5 8 9"></polyline>
@@ -409,7 +424,6 @@
               </div>
             </div>
           </div>
-
           <div class="project-box-wrapper" data-aos="fade-up">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
@@ -690,6 +704,10 @@
         link.addEventListener("mouseleave", () => {
           cursorInner.classList.remove("hover");
           cursorOuter.classList.remove("hover");
+          cursorInner.style.left = `${posX}px`;
+          cursorInner.style.top = `${posY}px`;
+          cursorOuter.style.left = `${posX}px`;
+          cursorOuter.style.top = `${posY}px`;
         });
       });
     });
